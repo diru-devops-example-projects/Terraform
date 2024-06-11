@@ -1,0 +1,6 @@
+1 Create a custom vpc with default cidr block of 10.0.0.0/16
+2 Create two public and private subnets
+3 Create an internet gateway and attach it the custom vpc
+4 Create a route table and associate it to the custom vpc
+5 Configure the public subnets to be associated with internet gateway in the route table
+6 

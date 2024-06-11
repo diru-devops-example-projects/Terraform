@@ -14,8 +14,8 @@ provider "aws" {
 
 # Create a VPC
 resource "aws_vpc" "test-vpc" {
-  cidr_block       = "10.0.0.0/16"
-  instance_tenancy = "default"
+  cidr_block           = "10.0.0.0/16"
+  instance_tenancy     = "default"
   enable_dns_hostnames = true
 
   tags = {
@@ -116,12 +116,12 @@ resource "aws_route_table" "private-rtb-us-east-1b" {
 
 # Associate private subnet us-east-1a with private route table us-east-1a
 resource "aws_route_table_association" "private-rtb-association-1a" {
-  subnet_id = aws_subnet.test-private-subnet-us-east-1a.id
+  subnet_id      = aws_subnet.test-private-subnet-us-east-1a.id
   route_table_id = aws_route_table.private-rtb-us-east-1a.id
 }
 
 # Associate private subnet us-east-1b with private route table us-east-1b
 resource "aws_route_table_association" "private-rtb-association-1b" {
-  subnet_id = aws_subnet.test-private-subnet-us-east-1b.id
+  subnet_id      = aws_subnet.test-private-subnet-us-east-1b.id
   route_table_id = aws_route_table.private-rtb-us-east-1b.id
 }
